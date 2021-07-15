@@ -1,0 +1,81 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sustainyou",
+		"_postman_id": "4efde7dd-e16c-f5a9-4504-5f569639f4e2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost/wp-test/wp-json/api/v1/sustainyou/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"usename\":\"abuzercs\",\n\t\"password\":\"google.123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Password update",
+			"request": {
+				"url": "http://localhost/wp-test/wp-json/api/v1/sustainyou/reset-password",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3dwLXRlc3QiLCJpYXQiOjE2MjYyOTc0MzIsIm5iZiI6MTYyNjI5NzQzMiwiZXhwIjoxNjI2NzI5NDMyLCJkYXRhIjp7InVzZXIiOnsiaWQiOjF9fX0.raPByTxyI5BGrkN7MIhhBlGtP2afh_Dw0UqTILc3fOg",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"new_password\":\"google123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"url": "http://localhost/wp-test/wp-json/api/v1/sustainyou/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3dwLXRlc3QiLCJpYXQiOjE2MjYyOTc0MzIsIm5iZiI6MTYyNjI5NzQzMiwiZXhwIjoxNjI2NzI5NDMyLCJkYXRhIjp7InVzZXIiOnsiaWQiOjF9fX0.raPByTxyI5BGrkN7MIhhBlGtP2afh_Dw0UqTILc3fOg",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"google123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
