@@ -59,12 +59,12 @@ if (!class_exists('GLBasicJWTRestApiEndPoint')) {
 
         public function gl_reset_password($request) {
             $json_params = $request->get_json_params();
+
             $user = $this->gl_validate_token();
             $user_id = $user->ID;
-            if (!empty($json_params['new_password'])) {
-                $updated = wp_set_password($json_params['new_password'], $user_id);
-                if ($updated) {
 
+            if (!empty($json_params['new_password'])) {
+                     wp_set_password($json_params['new_password'], $user_id);
                     $response = array(
                         'success' => true,
                         'statusCode' => 200,
@@ -72,7 +72,7 @@ if (!class_exists('GLBasicJWTRestApiEndPoint')) {
                         'data' => array(),
                     );
                     return new WP_REST_Response($response);
-                } else {
+            }else {
                     $response = array(
                         'success' => true,
                         'statusCode' => 403,
@@ -81,7 +81,6 @@ if (!class_exists('GLBasicJWTRestApiEndPoint')) {
                     );
                     return new WP_REST_Response($response,403);
                 }
-            }
         }
 
         public function gl_user_login_callback($request) {
